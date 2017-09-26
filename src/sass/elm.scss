@@ -1,0 +1,52 @@
+@import './base.scss';
+.el-date-table td.available:hover,
+.el-picker-panel__shortcut:hover{
+  color:white;
+}
+.el-cascader__label{
+  line-height: 50px;
+}
+.el-cascader__label{
+  padding-left: 20px;
+}
+.el-cascader{
+  width:130px;
+}
+.el-checkbox__label{
+  padding-left: 10px;
+}
+.el-checkbox-group .el-checkbox {
+  margin-left:0;
+  margin-bottom:15px;
+  width: 95px;
+  &:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.el-table{
+  font-size: 16px;
+}
+.el-table th{
+  height: 50px;
+  text-align: center;
+}
+.el-table td{
+  height: 65px;
+  text-align: center;
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td{
+  background:$lightBg;
+}
+.el-pagination__jump input{
+  width: 34px;
+  height: 28px;
+  padding: 0;
+}
+.el-pager li:hover{
+  background: $lightBg;
+  color:$grey32;
+}
+.el-pager li.active:hover{
+  background: $primary;
+  color:$lightBg;
+}

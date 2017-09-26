@@ -1,0 +1,53 @@
+@mixin set-font($px) {
+    font-size: $px+px;
+}
+  
+@mixin sameLine($px) {
+    line-height: $px+px;
+    height: $px+px;
+}
+@mixin bgm() {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin shadow {
+    box-shadow: 0 px2rem(3) px2rem(19) $shadow;
+}
+
+//底部按钮
+@mixin bot-submit {
+    height: px2rem(45);
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    span {
+        flex: 1;
+        @include set-font(15);
+        @include h-lh(45);
+    }
+}
+$pHover:#3585F8;
+$disable:#cecece;
+$primary:#2156a3;
+$lightBg:#f4f8fe;
+$bgfe:#fafcfe;
+$bgfd:#a8cafd;
+$greye1:#e1e1e1;
+$grey32:#323232;
+$grey5c:#5c5c5c;
+$greya8:#a8a8a8;
+$grey71:#717171;
+$greyfb:#f9f9fb; //手机端默认背景颜色
+$grey97:#979797;
+$goldc9:#c9a682;
+$gold2f:#B1712F;
+$red:#d0021b;
+$black12:#121212;
+$yellow61:#FFE261;
+$orange:#FF6000;
+$shadow:rgba(114, 116, 119, .17);

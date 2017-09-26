@@ -1,0 +1,238 @@
+@import './base.scss';
+@import './elm.scss';
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    &:hover {text-decoration: none;}
+}
+ul,
+ol {
+    list-style: none;
+}
+
+.pic {
+    >img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.clearfix {
+    &:after {
+        content: "\200b";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+::-webkit-input-placeholder {
+    color: #adadad;
+}
+.c-white{
+    color:white
+}
+.fs-18,
+.h1,
+h1{
+    font-size: 18px;
+    line-height:25px
+}
+.fs-16,
+.h2,
+h2{
+    font-size: 16px;
+    line-height:22px
+}
+
+.fs-15 {
+    font-size: 15px;
+    line-height:21px
+}
+
+.fs-14,
+.h3,
+h3{
+    font-size: 14px;
+    line-height:20px
+}
+
+.fs-12,
+.h5,
+h5{
+    font-size: 12px;
+    line-height:27px
+}
+
+.fs-10 {
+    font-size: 10px;
+    line-height:14px
+}
+
+@for $i from 1 through 20 {
+    @if $i*5 < 10 {
+        .pt-0#{$i*5} {
+            padding-top:5*$i+px;
+        }
+        .pb-0#{$i*5} {
+            padding-bottom:5*$i+px;
+        }
+        .mt-0#{$i*5} {
+            margin-top:5*$i+px;
+        }
+        .mb-0#{$i*5} {
+            margin-bottom:5*$i+px;
+        }
+    }
+    @else {
+        .pt-#{$i*5} {
+            padding-top:5*$i+px;
+        }
+        .pb-#{$i*5} {
+            padding-bottom:5*$i+px;
+        }
+        .mt-#{$i*5} {
+            margin-top:5*$i+px;
+        }
+        .mb-#{$i*5} {
+            margin-bottom:5*$i+px;
+        }
+    }
+}
+
+$colorlist:(pHover $pHover) (disable $disable) (primary $primary) (lightBg $lightBg) (bgfe $bgfe) (bgfd $bgfd) (greye1 $greye1) (grey5c $grey5c) (grey71 $grey71) (greyfb $greyfb) (grey97 $grey97) (goldc9 $goldc9) (gold2f $gold2f) (red $red) (black12 $black12) (yellow61 $yellow61) (orange $orange);
+@each $color in $colorlist {
+    .c-#{nth($color,1)} {
+        color: nth($color, 2);
+    }
+    .bg-#{nth($color,1)} {
+        background-color: nth($color, 2);
+    }
+}
+.web-aside{
+  margin: 0 auto;
+  // background: url("../assets/img/aside-bg.png");
+}
+.web-inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+.web-1400{
+  width: 1400px;
+  margin: 0 auto;
+}
+.web-1200{
+  width: 1200px;
+  margin: 0 auto;
+}
+.web-720 {
+  width: 720px;
+  margin: 0 auto;
+}
+.wow {
+  visibility: hidden; 
+}
+button {
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: transparent;
+    &.primary{
+        background:$primary;
+        color:#fff;
+        &:hover{
+          color:$primary;
+          background: white;
+          border: 1px solid $primary;
+        }
+      }
+    &.else{
+        color:$primary;
+        background: white;
+        border: 1px solid $primary;
+        &:hover{
+          color:#fff;
+          background:$primary;
+        }
+    }
+}
+i.icon{
+    display: inline-block;
+}
+.icon-location{
+    width: 16px;
+    height: 21px;
+    // background: url("./assets/img/location.png") no-repeat;
+    background-size: contain;
+}
+.bg-img {
+   @include bgm;
+}
+.page-inner{
+  background: #fff;
+  padding: 70px 100px 140px;
+  box-sizing: border-box;
+  min-height: 1000px;
+  position: relative;
+  .inner-content{
+    width: 900px;
+    min-height: 700px;
+  }
+  input{
+    height: 50px;
+    font-size: 14px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $greye1;
+    &::focus, &:hover{
+      border: 1px solid $grey71;
+    }
+  }
+}
